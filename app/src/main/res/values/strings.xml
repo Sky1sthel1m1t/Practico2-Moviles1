@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Practico2</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="guardar">Guardar</string>
+</resources>
