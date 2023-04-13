@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity(), NoteAdapter.NoteListener {
         for (i in 0..5){
             val tasks = ArrayList<Task>()
             for (j in 0..10){
-                val task = Task("Tarea 1", false)
+                val task = Task("Tarea 1", false, j)
                 tasks.add(task)
             }
             notes.add(Note("Titulo $i", tasks, -1))

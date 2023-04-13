@@ -76,7 +76,8 @@ class OpenNoteActivity : AppCompatActivity() {
         val input = EditText(this)
         builder.setView(input)
         builder.setPositiveButton("Añadir") { dialog, which ->
-            taskAdapter.addTask(Task(input.text.toString(), false))
+            val lastId = note.getCheckBoxList()[note.getCheckBoxList().size - 1].id
+            taskAdapter.addTask(Task(input.text.toString(), false, lastId + 1))
         }
         builder.setNegativeButton("Cancelar") { dialog, which -> dialog.cancel() }
         builder.show()

@@ -64,8 +64,8 @@ class TaskAdapter(
         builder.show()
     }
 
-    private fun deleteTaskAt(task : Task) {
-        val position = taskList.indexOf(task)
+    private fun deleteTaskAt(task: Task) {
+        val position = taskList.indexOfFirst { it.id == task.id }
         taskList.removeAt(position)
         notifyItemRemoved(position)
     }
